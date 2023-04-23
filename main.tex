@@ -1,78 +1,6 @@
 \documentclass[10pt]{article}  
 
-%%%%%%%% PREÁMBULO %%%%%%%%%%%%
-\title{Reporte de Laboratorio}
-\usepackage[spanish]{babel} %Indica que escribiermos en español
-\usepackage[utf8]{inputenc} %Indica qué codificación se está usando ISO-8859-1(latin1)  o utf8  
-\usepackage{amsmath} % Comandos extras para matemáticas (cajas para ecuaciones,
-% etc)
-\usepackage{amssymb} % Simbolos matematicos (por lo tanto)
-\usepackage{longtable} %agregadom para hacer tablas
-\usepackage{xltabular}
-\usepackage{graphicx} % Incluir imágenes en LaTeX
-\usepackage{color} % Para colorear texto
-\usepackage{subfigure} % subfiguras
-\usepackage{float} %Podemos usar el especificador [H] en las figuras para que se
-% queden donde queramos
-\usepackage{capt-of} % Permite usar etiquetas fuera de elementos flotantes
-% (etiquetas de figuras)
-\usepackage{sidecap} % Para poner el texto de las imágenes al lado
-	\sidecaptionvpos{figure}{c} % Para que el texto se alinie al centro vertical
-\usepackage{caption} % Para poder quitar numeracion de figuras
-\usepackage{commath} % funcionalidades extras para diferenciales, integrales,
-% etc (\od, \dif, etc)
-\usepackage{cancel} % para cancelar expresiones (\cancelto{0}{x})
- 
-\usepackage{anysize} 					% Para personalizar el ancho de  los márgenes
-\marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
-
-\usepackage{appendix}
-\renewcommand{\appendixname}{Apéndices}
-\renewcommand{\appendixtocname}{Apéndices}
-\renewcommand{\appendixpagename}{Apéndices} 
-% Para que las referencias sean hipervínculos a las figuras o ecuaciones y
-% aparezcan en color
-\usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=blue]{hyperref}
-%\usepackage{hyperref} 
-% Para agregar encabezado y pie de página
-\usepackage{fancyhdr} 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\footnotesize UNI} %encabezado izquierda
-\fancyhead[R]{\footnotesize Fac. de Ciencias}   % dereecha
-\fancyfoot[R]{\footnotesize Reporte}  % Pie derecha
-\fancyfoot[C]{\thepage}  % centro
-\fancyfoot[L]{\footnotesize Reporte de conteo y medicion.}  %izquierda
-\renewcommand{\footrulewidth}{0.4pt}
-
-
-\usepackage{listings} % Para usar código fuente
-\definecolor{dkgreen}{rgb}{0,0.6,0} % Definimos colores para usar en el código
-\definecolor{gray}{rgb}{0.5,0.5,0.5} 
-% configuración para el lenguaje que queramos utilizar
-\lstset{language=Matlab,
-   keywords={break,case,catch,continue,else,elseif,end,for,function,
-      global,if,otherwise,persistent,return,switch,try,while},
-   basicstyle=\ttfamily,
-   keywordstyle=\color{blue},
-   commentstyle=\color{red},
-   stringstyle=\color{dkgreen},
-   numbers=left,
-   numberstyle=\tiny\color{gray},
-   stepnumber=1,
-   numbersep=10pt,
-   backgroundcolor=\color{white},
-   tabsize=4,
-   showspaces=false,
-   showstringspaces=false}
-
-\newcommand{\sen}{\operatorname{\sen}}	% Definimos el comando \sen para el seno
-%en español
-
-\title{Plantilla para Reportes IMEC-UTB}
-% Basada en la plantilla para reportes UPIITA de  Overleaf
-
-%%%%%%%% TERMINA PREÁMBULO %%%%%%%%%%%%
+\input{inputs/preambulo.tex}
 
 \begin{document}
 
@@ -88,15 +16,10 @@
 	\begin{itemize}
 		\item Medición y error experimental
 		\item Medición y propagación de errores
-		\item Gráfica de los resultados en una medición experimental
+		\item Gráfica de los resultados en una medición experimental \cite{aba}
 	\end{itemize}
 
 \end{abstract}
 
-\section{Bibliografía}
-\begin{itemize}
-	\item  Serway. F\'isica. Editorial McGraw-Hill (1992).\\
-	\item Tipler. Física. Editorial Revert\'e (1994). \\
-	\item Taylor, J.R. (2014) Introducci\'on al Análisis de errores - reverte, Taylor 2 Muestra.pdf. Disponible en: https://www.reverte.com/media/reverte/files/book-attachment-3746.pdf (Accessed: April 14, 2023).
-\end{itemize}
+\bibliography{./inputs/bibliografia.bib}
 \end{document}
